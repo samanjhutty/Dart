@@ -1,8 +1,6 @@
 import 'dart:io';
 
-void main(List<String> args) {
-  sumOddEven();
-}
+void main(List<String> args) {}
 
 revInput() {
   stdout.write("Enter a integer(output shall be reversed): ");
@@ -35,4 +33,20 @@ sumOddEven() {
   }
   print("sum of even integers is: $dummyEven");
   print("sum of odd integers is: $dummyOdd");
+}
+
+dynamicList() {
+  stdout.write("Enter the no of elements in list: ");
+  int? length = int.parse(stdin.readLineSync()!);
+
+  List list = [];
+  for (int i = 0; i < length; i++) {
+    list.add(int.parse(stdin.readLineSync()!));
+  }
+  stdout.write("Enter the no of elements in list: ");
+  int? length2 = int.parse(stdin.readLineSync()!);
+  for (int i = 0; i < length2; i++) {
+    list.add(int.parse(stdin.readLineSync()!));
+  }
+  stdout.write(list);
 }
