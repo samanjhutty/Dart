@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main(List<String> args) {
-  fibonacci();
+  numberPyramid2();
 }
 
 printNumber() {
@@ -73,7 +73,6 @@ primeComposite() {
   }
 }
 
-armstrong() {}
 fibonacci() {
   print("Enter no to print fibonacci series upto: ");
   int input = int.parse(stdin.readLineSync()!);
@@ -135,15 +134,45 @@ DoubleSpacedStarFlow() {
   }
 }
 
-// oddSpacedNumber() {
-//   int i, j, k;
-//   for (i = 1; i <= 10; i += 2) {
-//     for (j = 10; j > i; j--) {
-//       stdout.write(" ");
-//     }
-//     for (k = 0; k < i; k++) {
-//       stdout.write(i);
-//     }
-//     stdout.writeln();
-//   }
-// }
+numberPyramid() {
+  int i, j, k;
+  for (i = 1; i <= 5; i++) {
+    for (j = 5; j > i; j--) {
+      stdout.write(" ");
+    }
+    for (k = 0; k < i; k++) {
+      stdout.write(i);
+    }
+    if (i > 1) {
+      for (int l = 2; l <= i; l++) {
+        stdout.write(i);
+      }
+    }
+    stdout.writeln();
+  }
+}
+
+numberPyramid2() {
+  for (int i = 1; i < 6; i++) {
+    for (int j = 5; j > i; j--) {
+      write(" ");
+    }
+    for (int k = i; k >= 1; k--) {
+      write(k);
+    }
+    if (i > 1) {
+      for (int l = 2; l <= i; l++) {
+        write(l);
+      }
+    }
+    writeln("");
+  }
+}
+
+write(var write) {
+  stdout.write(write);
+}
+
+writeln(var write) {
+  stdout.writeln(write);
+}
