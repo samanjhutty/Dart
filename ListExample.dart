@@ -1,5 +1,6 @@
 ///Solutions
 import 'dart:io';
+import 'print.dart';
 
 void main(List<String> args) {
   firstLast();
@@ -62,12 +63,4 @@ firstLast() {
   list2.add(list.first);
   list2.add(list.last);
   writeln("new list: $list2");
-}
-
-write(var write) {
-  stdout.write(write);
-}
-
-writeln(var write) {
-  stdout.writeln(write);
 }

@@ -1,7 +1,10 @@
 import 'dart:ffi';
 import 'dart:io';
+import 'print.dart';
 
-void main(List<String> args) {}
+void main(List<String> args) {
+  checkExamAttend();
+}
 
 checkSquare() {
   print("Enter Length and breath");
@@ -81,6 +84,7 @@ checkAge() {
 }
 
 checkLowercase() {
+  write("Enter a charactor: ");
   String? letter = stdin.readLineSync();
   if (letter != null) {
     if (letter.contains(RegExp(r'[a-z]'))) {
@@ -106,9 +110,9 @@ checkLeapYear() {
 }
 
 checkVovel() {
-  var input = stdin.readLineSync()!;
-  var char = input.toLowerCase() as Char;
-  if (char != Char || input.length > 1) {
+  write("Enter a charctor to check for vovel: ");
+  var char = stdin.readLineSync()!;
+  if (char.length == 1) {
     if (char == 'a' ||
         char == 'e' ||
         char == 'i' ||
@@ -131,7 +135,7 @@ double checkAttendence() {
   int? classesAttend = int.parse(stdin.readLineSync()!);
 
   double perc = (classesAttend / classesHeld) * 100;
-  print("ypur percentage is: $perc");
+  print("your percentage is: $perc");
   return perc;
 }
 

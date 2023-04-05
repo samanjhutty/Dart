@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'print.dart';
 
 void main(List<String> args) {
   numberPyramid2();
@@ -167,12 +168,4 @@ numberPyramid2() {
     }
     writeln("");
   }
-}
-
-write(var write) {
-  stdout.write(write);
-}
-
-writeln(var write) {
-  stdout.writeln(write);
 }
