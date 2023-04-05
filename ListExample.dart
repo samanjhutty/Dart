@@ -2,7 +2,7 @@
 import 'dart:io';
 import 'print.dart';
 
-void main(List<String> args) {
+void main() {
   firstLast();
 }
 
@@ -58,9 +58,9 @@ firstLast() {
   for (int i = 0; i < length; i++) {
     list.add(int.parse(stdin.readLineSync()!));
   }
-  write("Entered list: $list");
-  List<int> list2 = [];
-  list2.add(list.first);
-  list2.add(list.last);
+  writeln("Entered list: $list");
+  List? list2 = List.filled(2, null, growable: true);
+  list2[0] = list.first;
+  list2[1] = list.last;
   writeln("new list: $list2");
 }
