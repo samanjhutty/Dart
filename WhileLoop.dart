@@ -7,7 +7,7 @@ void main(List<String> args) {
 }
 
 revInput() {
-  stdout.write("Enter a integer(output shall be reversed): ");
+  write("Enter a integer(output shall be reversed): ");
   int input = int.parse(stdin.readLineSync()!);
   String sInput = input.toString();
   String revInput = "";

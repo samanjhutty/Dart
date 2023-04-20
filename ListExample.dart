@@ -8,6 +8,8 @@ void main() {
 
 printLessNumbers() {
   List<int> list = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+  // Set set = Set();
+  // Set st = {};
 
   for (int i in list) {
     if (i < 5) {
